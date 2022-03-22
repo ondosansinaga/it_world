@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --primary: #C0FF6B;
+    --dark: #000000;
+    --white: #ffffff;
+    --body: #D5D5D5;
+    --body2: #656565;
+    --shadow: 0 1px 17px rgb(213, 213, 213);
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+
+h2,h3,h4,h5,h6
+.display-4 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.btn {
+    padding: 10px 30px;
+    
+}
+
+p{
+    color: var(--white);
+    line-height: 1.7;
+}
+
+.hero {
+    background-image: url(/images/home_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+
+}
+
+.hero::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.8);
+    z-index: -1;
+
+}
+
+.navbar-bg {
+    background-color: black;
+
+}
+
+.btn-bg {
+    background-color: #C0FF6B;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-bg:hover {
+    background-color: #2e5200;
+    color: white;
+}
+
+.title-home-bold{
+    font-weight: bold;
+    color: var(--white);
+    font-weight: 700;
+   
+}
+
+.title-home-reguler{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-weight: 400;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+section h1{
+    color: var(--dark);
+    font-weight: 700;
+}
+
+
+
+section p {
+    color: var(--body2);
+}
+
+section h5{
+    color: var(--dark);
+}
+
+.card-effect {
+    box-shadow: var(--shadow);
+    background-color: var(--white);
+    padding: 25px;
+    transition: all 0.35s ease;
+    border-radius: 8px;
+}
+
+.card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: black;
+    border-radius: 100%;
+    margin-bottom: 26px;
+    font-size: 24px;
+    flex: none;
+}
+
+.services {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+}
+
+.services::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--dark);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.services:hover .iconbox {
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.services:hover h5,
+.services:hover p {
+    color: white;
+
+}
+
+.services:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.col-img {
+    background-image: url(/images/img.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    
+}
+
+.hardware {
+    position: relative;
+    overflow: hidden;
+}
+
+.hardware .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.hardware img {
+    transition: all 0.4s ease;
+}
+
+.hardware:hover .overlay{
+
+    opacity: 1;
+}
+
+.hardware:hover img {
+    transform: scale(1.1);
+}
+
+.pricing ul li {
+    margin-top: 8px;
+}
+
+#pricing .card-effect {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+#pricing .pricing h1 {
+    color: var(--primary);
+}
+
+.team-member img{
+    width: 150px;
+    height: 150px;
+
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--dark);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    
+}
+
+.social-icons a:hover {
+    color: var(--dark);
+    border-color: var(--dark);
+    border: 2px solid var(--dark);
+    background-color: transparent;
+}
+
+#team .row {
+    justify-content: center;
+}
+
+form input.form-control {
+    height: 56px;
+
+}
+
+form .form-control {
+    border: transparent;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.050);
+}
+
+.footer-top {
+    padding-bottom: 90px;
+    padding: 90px;
+    background-color: var(--dark);
+}
+
+
+footer .logo {
+    width: 160px;
+}
+
+.footer-top a {
+    color: var(--body);
+}
+
+.footer-top a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom{
+    background-color: var(--dark);
+}
+
+footer i {
+    color: var(--primary);   
+}
+
+footer .social-icons a {
+    background-color: var(--dark);
+}
+
+footer .social-icons a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    border: 2px solid var(--primary);
+    background-color: transparent;
+}
